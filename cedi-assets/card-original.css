@@ -1,0 +1,110 @@
+/* ===================== COMPONENTE: TARJETA CEDI 3D =====================
+   Copiar desde aquí hasta "FIN COMPONENTE" y el bloque HTML marcado.
+   Tamaño controlado por --ancho. Sin librerías, solo CSS. */
+.cedi-card-escena{
+  --ancho: min(340px, 78vw);
+  --alto: calc(var(--ancho) * 0.63);
+  --grosor: 4px;
+  --duracion: 8s;
+  position: relative;
+  width: 100%;
+  height: calc(var(--alto) * 1.75);
+  display: grid; place-items: center;
+  perspective: 1400px;
+  overflow: hidden;
+  background: radial-gradient(70% 60% at 50% 40%, #f3f2f1 0%, #dedcda 70%, #d4d2cf 100%);
+  border-radius: 20px;
+}
+.cedi-card-flota{ animation: cedi-flotar 4s ease-in-out infinite; transform-style: preserve-3d; }
+.cedi-card{
+  position: relative; width: var(--ancho); height: var(--alto);
+  transform-style: preserve-3d;
+  animation: cedi-girar var(--duracion) cubic-bezier(.45,.05,.55,.95) infinite;
+}
+.cedi-card-escena:hover .cedi-card{ animation-play-state: paused; }
+
+/* Caras */
+.cc-cara{
+  position: absolute; inset: 0; border-radius: calc(var(--ancho) * 0.045);
+  backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden;
+  background:
+    linear-gradient(115deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.55) 45%, rgba(255,255,255,0) 60%) var(--brillo-x, 0%) 0 / 300% 100% no-repeat,
+    repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, rgba(0,0,0,.025) 1px 2px),
+    linear-gradient(160deg, #eceded 0%, #c9cbcd 38%, #b3b6b9 62%, #d6d8da 100%);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.55), inset 0 -1px 0 rgba(0,0,0,.08);
+  font-family: Manrope, system-ui, sans-serif; color: #141414;
+  animation: cedi-brillo var(--duracion) linear infinite;
+}
+.cc-frente{ transform: translateZ(calc(var(--grosor) / 2)); }
+.cc-reverso{ transform: rotateY(180deg) translateZ(calc(var(--grosor) / 2)); }
+
+/* Canto metálico: capas apiladas */
+.cc-canto{ position: absolute; inset: 0; border-radius: calc(var(--ancho) * 0.045);
+  background: linear-gradient(90deg, #8d9094, #e6e7e8 50%, #8d9094); }
+.cc-canto:nth-of-type(1){ transform: translateZ(-1.5px) } .cc-canto:nth-of-type(2){ transform: translateZ(-.5px) }
+.cc-canto:nth-of-type(3){ transform: translateZ(.5px) }  .cc-canto:nth-of-type(4){ transform: translateZ(1.5px) }
+
+/* Frente */
+.cc-logo{ position: absolute; top: 9%; right: 7%; font-weight: 600; letter-spacing: -.03em; font-size: calc(var(--ancho) * 0.085); line-height: 1; }
+.cc-nfc{ position: absolute; left: 9.5%; top: 25%; width: 6%; }
+.cc-chip{ position: absolute; left: 8%; top: 35%; width: 13%; aspect-ratio: 1.25; border-radius: 18%;
+  background: linear-gradient(135deg, #f4f4f4, #b9bcbf 45%, #e8e9ea 70%, #a9acaf); box-shadow: inset 0 0 0 1px rgba(0,0,0,.18); }
+.cc-chip svg{ width: 100%; height: 100%; display: block; }
+.cc-red{ position: absolute; right: 7%; bottom: 10%; width: 14%; aspect-ratio: 1.6; }
+.cc-red i{ position: absolute; top: 0; width: 62.5%; aspect-ratio: 1; border-radius: 50%; }
+.cc-red i:first-child{ left: 0; background: #3c3d3f; }
+.cc-red i:last-child{ right: 0; background: #9a9da0; mix-blend-mode: multiply; opacity: .9; }
+
+/* Reverso */
+.cc-banda{ position: absolute; left: 0; right: 0; top: 10%; height: 20%; background: linear-gradient(180deg, #0c0c0c, #1d1d1d 50%, #0c0c0c); }
+.cc-logo-chico{ position: absolute; left: 7%; bottom: 25%; font-weight: 600; letter-spacing: -.03em; font-size: calc(var(--ancho) * 0.05); }
+.cc-legal{ position: absolute; left: 7%; bottom: 12%; width: 55%; display: grid; gap: 4px; }
+.cc-legal span{ display: block; height: 3px; border-radius: 2px; background: rgba(0,0,0,.18); }
+.cc-legal span:nth-child(2){ width: 80%; }
+.cc-holo{ position: absolute; right: 7%; bottom: 10%; width: 14%; aspect-ratio: 1.45; border-radius: 6px;
+  background: conic-gradient(from 0deg, #d9dcdf, #f6f6f6, #b7bbbf, #eef0f1, #c7cacd, #d9dcdf); box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+
+/* Sombra en el piso */
+.cc-sombra{ position: absolute; left: 50%; bottom: 12%; width: calc(var(--ancho) * 1.1); height: 18px; transform: translateX(-50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0,0,0,.22), rgba(0,0,0,0) 70%); filter: blur(4px);
+  animation: cedi-sombra 4s ease-in-out infinite; }
+
+/* Animaciones: reverso, giro al frente, pausa lenta en el frente, giro al reverso */
+@keyframes cedi-girar{
+  0%   { transform: rotateX(4deg) rotateY(160deg); }
+  30%  { transform: rotateX(4deg) rotateY(345deg); }
+  55%  { transform: rotateX(4deg) rotateY(375deg); }
+  100% { transform: rotateX(4deg) rotateY(520deg); }
+}
+@keyframes cedi-brillo{ 0%{ --brillo-x: 0% } 100%{ --brillo-x: 100% } }
+@keyframes cedi-flotar{ 0%,100%{ transform: translateY(-6px) } 50%{ transform: translateY(6px) } }
+@keyframes cedi-sombra{ 0%,100%{ opacity: .75; transform: translateX(-50%) scaleX(.92) } 50%{ opacity: 1; transform: translateX(-50%) scaleX(1) } }
+@property --brillo-x{ syntax: '<percentage>'; inherits: false; initial-value: 0%; }
+
+@media (prefers-reduced-motion: reduce){
+  .cedi-card{ animation: none; transform: rotateX(4deg) rotateY(-14deg); }
+  .cedi-card-flota, .cc-sombra, .cc-cara{ animation: none; }
+}
+/* ===================== FIN COMPONENTE ===================== */
+
+
+/* Integration: the rotating card and spending controls occupy separate rows. */
+.cs-cards{height:600px!important;min-height:600px!important;container-type:inline-size}
+.cs-cards .cs-inner{justify-content:center;gap:15px}
+.cs-cards .cedi-card-escena{flex:none;--ancho:min(300px,72cqw);border-radius:0;max-width:100%;background:transparent}
+.cs-cards .cc-cara{font-family:'Montserrat',system-ui,sans-serif}
+.cs-card-control{width:100%;max-width:340px;margin:0 auto;display:grid;gap:10px;padding:0 12px}
+.cs-card-control>div:first-child{display:flex;justify-content:space-between;gap:10px;font-size:11px}
+.cs-card-control .cs-limit{height:6px;flex:none}
+.cs-cards .cs-card-events{min-height:62px;gap:7px;font-size:10px}
+.cs-cards:not(.cs-visible) .cedi-card-escena *{animation-play-state:paused!important}
+.lux-motion-paused .cedi-card{transform:rotateX(4deg) rotateY(-14deg)}
+@media(max-width:500px){.cs-cards{height:500px!important;min-height:500px!important}.cs-cards .cedi-card-escena{--ancho:min(240px,72cqw)}.cs-cards .cs-inner{gap:12px}}
+@supports not (width:1cqw){.cs-cards .cedi-card-escena{--ancho:min(280px,58vw)}}
+
+html[data-theme] body .curated-scene .cedi-card-escena .cc-cara{background:
+    linear-gradient(115deg, rgba(255,255,255,0) 30%, rgba(255,255,255,.55) 45%, rgba(255,255,255,0) 60%) var(--brillo-x, 0%) 0 / 300% 100% no-repeat,
+    repeating-linear-gradient(90deg, rgba(255,255,255,.035) 0 1px, rgba(0,0,0,.025) 1px 2px),
+    linear-gradient(160deg, #eceded 0%, #c9cbcd 38%, #b3b6b9 62%, #d6d8da 100%)!important;color:#141414!important}
+html[data-theme] body .curated-scene .cedi-card-escena :is(.cc-logo,.cc-logo-chico,.cc-legal){color:#141414!important;-webkit-text-fill-color:#141414!important}
+html[data-theme] body .curated-scene .cedi-card-escena svg{color:#141414!important;stroke:currentColor!important}

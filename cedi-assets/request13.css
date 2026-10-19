@@ -1,0 +1,30 @@
+/* Cambios limitados a los trece puntos solicitados. */
+html[data-theme] body .cs-switches i{transition:background-color .4s ease}
+html[data-theme] body .cs-permissions[data-phase="1"] [data-toggle="0"],
+html[data-theme] body .cs-permissions:not([data-phase="0"]) [data-toggle="1"],
+html[data-theme] body .cs-permissions[data-phase="3"] [data-toggle="2"],
+html[data-theme] body .cs-permissions[data-phase="4"] [data-toggle="3"]{background:var(--azul)!important}
+html[data-theme] body .cs-chat-head>i,html[data-theme] body .cs-typing>i{background:var(--azul)!important}
+html[data-theme] body .cs-chat-answer{border-left:3px solid var(--azul)!important}
+html[data-theme] body .cs-chat-question{border-color:var(--azul)!important}
+html[data-theme] body .agent-audiences{grid-template-columns:2fr 1fr}
+html[data-theme] body footer .legal>p,html[data-theme] body footer .legal a[href="https://www.soycedi.com"]{font-size:12px!important;line-height:1.9!important;font-weight:400}
+html[data-theme] body .membership-card button[data-plan]{font-weight:700!important}
+html[data-theme] body .hero-cursor-light{background:radial-gradient(180px circle at var(--cursor-x,70%) var(--cursor-y,40%),color-mix(in srgb,var(--azul) 9%,transparent),transparent 80%)!important}
+html[data-theme] body .curated-scene.content-video-slot>video:not([hidden]){z-index:4;border-radius:inherit;object-fit:contain}
+html[data-theme] body .curated-scene.content-video-slot.video-ready:before,
+html[data-theme] body .curated-scene.content-video-slot.video-ready:after{visibility:hidden}
+.centry-video-dialog{width:min(960px,calc(100vw - 32px));max-height:calc(100dvh - 32px);box-sizing:border-box;padding:48px 16px 16px;border:1px solid var(--borde);border-radius:20px;background:var(--fondo);color:var(--texto)}
+.centry-video-dialog::backdrop{background:color-mix(in srgb,var(--fondo) 80%,transparent)}
+.centry-video-dialog video{display:block;width:100%;aspect-ratio:16/9;max-height:calc(100dvh - 120px)}
+.centry-video-close{position:absolute;right:12px;top:8px;border:0;background:transparent;color:var(--texto);font-size:26px;cursor:pointer;padding:4px 10px}
+.centry-video-close:focus-visible{outline:2px solid var(--azul)}
+.centry-video-status{line-height:1.5}
+@media(max-width:700px){html[data-theme] body .agent-audiences{grid-template-columns:1fr}}
+@media(max-width:899px){
+html[data-theme] body #handoff-mobile-menu :is(a,summary),html[data-theme] body .handoff-mobile-actions a{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html[data-theme] body #handoff-mobile-menu :is(a,summary):is(:hover,:focus),html[data-theme] body .handoff-mobile-actions a:is(:hover,:focus){color:var(--azul)!important;-webkit-text-fill-color:var(--azul)!important}
+}
+@media(prefers-reduced-motion:reduce){html[data-theme] body .cs-switches i{transition:none}}
+
+.centry-product-explanation video{display:block;width:100%;max-height:80vh;aspect-ratio:16/9;object-fit:contain;border-radius:20px;background:var(--fondo)}

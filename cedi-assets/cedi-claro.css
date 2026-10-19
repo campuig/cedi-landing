@@ -1,0 +1,74 @@
+
+html[data-theme="light"]{
+ --cedi-white:var(--texto);--cedi-black:var(--fondo);--cedi-navy:var(--acento);--cedi-cyan:var(--acento);
+ --cedi-gray-90:var(--acento);--cedi-gray-60:var(--texto-2);--cedi-gray-30:var(--texto-2);--cedi-gray-12:var(--texto);--cedi-gray-6:var(--texto);
+ --color-page:var(--texto);--color-surface:var(--texto);--color-surface-muted:var(--texto);
+ --color-text:var(--fondo);--color-heading:var(--acento);--color-text-secondary:var(--acento);
+ --color-link:var(--acento);--color-accent:var(--acento);--color-accent-text:var(--acento);
+ --color-border:var(--borde);--color-divider:var(--texto-2);--color-focus:var(--acento);
+ --color-primary:var(--acento);--color-on-primary:var(--texto);--color-disabled:var(--texto-2);
+ --color-status:var(--acento);--color-series-1:var(--acento);--color-series-2:var(--acento);--color-series-3:var(--acento);
+ color-scheme:light;background:var(--color-page);color:var(--color-text)
+}
+html[data-theme=light] body{background:var(--texto)!important;color:var(--fondo)!important}
+html[data-theme=light] body :is(main,footer,.lux-hero,.lux-collection,.cedi-system,.agent-lab,.operating-model,.advisor-contact,.product-story,.content-page,.cedi-sidebar.mt-header,.restored-nav-panel,.restored-menu-intro,.restored-menu-links,.global-preferences){background:var(--texto)!important;color:var(--fondo)!important;border-color:var(--borde)!important}
+html[data-theme=light] body :is(p,small,figcaption,label,td,li,dt,dd,code,blockquote,.lux-kicker,.product-name,.agent-stage-label,.agent-prototype){color:var(--acento)!important;text-shadow:none!important}
+html[data-theme=light] body :is(h1,h2,h3,h4,strong,b,th,summary){color:var(--acento)!important;text-shadow:none!important}
+html[data-theme=light] body :is(a,button,input,select,textarea){color:var(--acento)!important}
+html[data-theme=light] body :is(.content-card,.curated-product,.membership-card,.advisor-calendar,.access-form-card,.agent-copy,.agent-visual,.agent-stage,.agent-chat,.agent-card,.signup-password,.ico-tile){background:var(--texto)!important;color:var(--fondo)!important;border-color:var(--borde)!important;box-shadow:none!important}
+html[data-theme=light] body :is(.lux-intro,.hero-trust,.curated-preview-note,.paso-desc,.paso-num,.lab-caption span,.restored-menu-links small,.advisor-disclaimer,.signup-rules,.signup-match,.content-steps li:before){color:var(--acento)!important;opacity:1}
+html[data-theme=light] body .cedi-wordmark{color:var(--fondo)!important;filter:none!important}html[data-theme=light] .logo{background:var(--texto)!important}
+html[data-theme=light] body .btn-vidrio,html[data-theme=light] body .visual-link-button,html[data-theme=light] body .product-tabs button{background:var(--texto)!important;color:var(--acento)!important;border:1px solid var(--borde)!important;box-shadow:inset 0 1px color-mix(in srgb, var(--fondo) 100%, transparent)!important;backdrop-filter:none!important}
+html[data-theme=light] body .btn-vidrio:before,html[data-theme=light] body .btn-vidrio:after{background:none!important;box-shadow:none!important;filter:none!important}
+html[data-theme=light] body :is(.btn-vidrio.principal,.btn-vidrio.acento,.hero-demo,.advisor-submit,.signup-submit,.sidebar-contact,.handoff-mobile-actions>a),html[data-theme=light] body .product-tabs [aria-selected=true],html[data-theme=light] body .blog-filters [aria-pressed=true],html[data-theme=light] body .advisor-calendar button[aria-pressed=true]{background:var(--aux-4)!important;color:var(--texto)!important;border-color:var(--acento)!important}
+html[data-theme=light] body :is(.btn-vidrio.principal,.btn-vidrio.acento,.hero-demo,.advisor-submit,.signup-submit,.sidebar-contact,.handoff-mobile-actions>a) *{color:var(--texto)!important}
+html[data-theme=light] #inicio .hero-demo{background:var(--aux-4)!important;color:var(--texto)!important;border-color:var(--acento)!important}
+html[data-theme=light] #inicio h1 .hero-impact-line{color:var(--acento)!important}html[data-theme=light] #inicio h1 .hero-impact-secondary{color:var(--acento)!important}html[data-theme=light] #inicio .lux-kicker{color:var(--acento)!important}
+html[data-theme=light] body :is(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:2px solid var(--acento)!important;outline-offset:4px!important;box-shadow:0 0 0 4px color-mix(in srgb, var(--fondo) 100%, transparent)!important}
+html[data-theme=light] body :is(input,select,textarea){background:var(--texto)!important;color:var(--fondo)!important;border:1px solid var(--borde)!important;accent-color:var(--acento)}
+html[data-theme=light] body :is(input,textarea)::placeholder{color:var(--acento)!important;opacity:1}
+html[data-theme=light] body :is(button,input,select,textarea):disabled{background:var(--texto)!important;color:var(--texto-2)!important;opacity:1!important;cursor:not-allowed;box-shadow:none!important;border-color:var(--borde)!important}
+html[data-theme=light] body :is(.curated-signup,.signup-password,.signup-password button,.signup-password input){background:var(--texto)!important;color:var(--fondo)!important}
+html[data-theme=light] body :is(.restored-nav-trigger,#login-trigger,.sidebar-create){color:var(--acento)!important;background:var(--texto)!important;border-color:var(--borde)!important}
+html[data-theme=light] body #login-choices a,html[data-theme=light] body .login-choices a,html[data-theme=light] body .access-role{background:var(--aux-4)!important;color:var(--texto)!important}
+html[data-theme=light] body :is(#handoff-mobile-menu,#login-choices){background:var(--texto)!important;border-color:var(--borde)!important}
+html[data-theme=light] body #handoff-mobile-menu :is(a,summary){color:var(--acento)!important}
+html[data-theme=light] body :is(.ico-tile svg,.learn-more span,.hero-how span,.content-benefits span,.cs-inner svg){color:var(--acento)!important}
+html[data-theme=light] body :is(table,.cs-token-row,.cs-match-board,.cs-clabe-list){color:var(--fondo)!important;font-variant-numeric:tabular-nums}
+html[data-theme=light] body th{background:var(--texto)!important;color:var(--acento)!important}html[data-theme=light] body td{color:var(--fondo)!important;border-color:var(--borde)!important}
+html[data-theme=light] body .curated-scene{--cs-ink:var(--fondo)!important;--cs-muted:var(--acento)!important;--cs-panel:var(--texto)!important;--cs-line:var(--texto-2)!important;--cs-blue:var(--acento)!important;--cs-positive:var(--acento)!important;--cs-negative:var(--acento)!important;--cs-warn:var(--acento)!important;background:var(--texto)!important;color:var(--fondo)!important}
+html[data-theme=light] body .curated-scene>.editorial-photo:after{background:color-mix(in srgb, var(--texto) 88%, transparent)!important}html[data-theme=light] body .curated-scene>.cs-inner{background:transparent!important}
+html[data-theme=light] body .curated-scene :is(span,p,small,label,code,b,strong,div){color:var(--fondo)!important}
+html[data-theme=light] body .curated-scene :is(.cs-end,.cs-token-row,.cs-usd-card,.cs-pos-device,.cs-contactless-card,.cs-terminal-screen,.cs-chat-messages p,.cs-checkout-box,.cs-checkout-option,.cs-receipt-paper,.cs-topup-vessel,.cs-payment-queue>div,.cs-expenses>span,.cs-match-board span,.cs-clabe-list>div,.cs-pay-calendar,.cs-amortization>div,.cs-beneficiaries>div,.cs-trade-chain>div){background:var(--texto)!important;border-color:var(--borde)!important}
+html[data-theme=light] body .curated-scene :is(.cs-track b,.cs-bulk,.cs-checkout-success,.cs-vat-recover){background:var(--texto)!important;color:var(--fondo)!important}
+html[data-theme=light] body :is(.cs-three-bars i,.cs-monthly i){background:var(--aux-4)!important;border:1px solid var(--acento)!important}
+html[data-theme=light] body .cs-three-bars>div:nth-child(2) i{background:repeating-linear-gradient(45deg,var(--texto) 0 3px,var(--aux-2) 3px 7px)!important;border-color:var(--acento)!important}html[data-theme=light] body .cs-three-bars>div:nth-child(3) i{background:var(--aux-3)!important;border-radius:12px 12px 0 0}
+html[data-theme=light] body .cs-world :is(text,.cs-reach){fill:var(--acento)!important;color:var(--acento)!important}html[data-theme=light] body .cs-world-map{color:var(--acento)!important}
+html[data-theme=light] body .cs-switches i{background:var(--texto)!important;border:1px solid var(--borde)!important}html[data-theme=light] body .cs-switches i.on{background:var(--aux-4)!important}
+html[data-theme=light] body .content-page .photo-header{background:var(--aux-4)!important}html[data-theme=light] body .photo-header:after{background:var(--aux-4)!important}html[data-theme=light] body .content-page .photo-header :is(h1,p,span,.lux-kicker){color:var(--texto)!important}
+html[data-theme=light] body .hero-proof span{background:var(--aux-4)!important;color:var(--texto)!important;border-color:var(--borde)!important}
+html[data-theme=light] body .cedi-card-escena :is(span,p,b,strong){color:var(--fondo)!important}
+html[data-theme=light] body [aria-invalid=true]{border:2px solid var(--acento)!important}
+html[data-theme=light] body .content-prose a:not(.btn-vidrio),html[data-theme=light] body p a{text-decoration:underline;text-underline-offset:3px}
+html[data-theme=light] body .perilla{background:var(--aux-4)!important}
+html[data-theme=light] body :is(.agent-description,.agent-selector button,.agent-controls button,.agent-trigger,.agent-scope,.agent-experience,.cedi-stat-strip,.lux-announcement,.content-demo){background:var(--texto)!important;color:var(--acento)!important;border-color:var(--borde)!important}
+html[data-theme=light] body .agent-selector button[aria-pressed=true]{background:var(--texto)!important;color:var(--acento)!important;border:2px solid var(--acento)!important}
+html[data-theme=light] body .agent-description :is(p,span,small),html[data-theme=light] body .agent-heading h2 span,html[data-theme=light] body .agent-controls>span{color:var(--acento)!important}
+html[data-theme=light] body .cs-statuses span{opacity:1!important}html[data-theme=light] body .cs-statuses{color:var(--fondo)!important}
+html[data-theme=light] body .content-page .photo-header .ico-tile{background:var(--texto)!important}
+html[data-theme=light] body .content-page .photo-header .ico-tile svg{color:var(--acento)!important}
+html[data-theme=light] body .agent-stage{--agent-body:var(--texto);--agent-ink:var(--fondo);--agent-detail:var(--texto-2)}
+html[data-theme=light] body .cedi-status{display:flex;align-items:start;gap:12px;color:var(--acento)!important;background:var(--texto)!important;border:1px solid var(--borde);border-left:4px solid var(--acento);padding:16px;border-radius:8px}
+html[data-theme=light] body button{background-color:var(--texto)!important;border-color:var(--borde)!important}
+html[data-theme=light] body :is(.btn-vidrio.principal,.btn-vidrio.acento,.hero-demo,.advisor-submit,.signup-submit,.sidebar-contact,.handoff-mobile-actions>a),html[data-theme=light] body .product-tabs [aria-selected=true],html[data-theme=light] body .blog-filters [aria-pressed=true],html[data-theme=light] body .advisor-calendar button[aria-pressed=true]{background:var(--aux-4)!important;color:var(--texto)!important}
+html[data-theme=light] body .agent-selector :is(span,small){color:var(--acento)!important}
+html[data-theme=light] body .cedi-status[hidden]{display:none!important}
+html[data-theme=light] body :is(.lux-primary,.learn-more,.lux-link){color:var(--acento)!important;background:var(--texto)!important;border-color:var(--borde)!important}
+
+html[data-theme=light] body .curated-scene>.editorial-photo:after{background:color-mix(in srgb, var(--texto) 92%, transparent)!important}
+html[data-theme=light] body .curated-scene>.cs-inner{background:radial-gradient(ellipse at center,color-mix(in srgb, var(--texto) 60%, transparent),transparent)!important}
+html[data-theme=light] body .curated-scene .cs-world-map{color:var(--acento)!important}
+html[data-theme=light] body .curated-scene .cs-world-arcs{color:var(--acento)!important;stroke-width:3}
+html[data-theme=light] body .curated-scene .cs-world-pins{fill:var(--acento)!important;stroke:var(--texto);stroke-width:1.5}
+html[data-theme=light] body .curated-scene .cs-world text{fill:var(--acento)!important;font-weight:500}
+html[data-theme=light] body .curated-scene :is(.cs-end,.cs-token-row,.cs-chat-messages p,.cs-contactless-card,.cs-trade-chain>div,.cs-checkout-box,.cs-clabe-list>div,.cs-payment-queue>div){border-color:var(--acento)!important;box-shadow:0 3px 12px color-mix(in srgb, var(--fondo) 12%, transparent)!important}
