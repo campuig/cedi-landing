@@ -44,3 +44,6 @@ html[data-theme] body #agentes .agent-disclaimer{font-size:11px;line-height:1.7;
 @media(max-width:899px){html[data-theme] body #agentes .agent-experience{grid-template-columns:1fr}html[data-theme] body #agentes .agent-stage{padding:24px;gap:0}html[data-theme] body #agentes .agent-avatar{width:190px}html[data-theme] body #agentes .agent-conversation{max-width:560px}html[data-theme] body #agentes .agent-description{padding:28px}html[data-theme] body #agentes .agent-description h3{max-width:600px}}
 @media(max-width:480px){html[data-theme] body #agentes.agent-showcase{padding:56px 20px}html[data-theme] body #agentes .agent-description{padding:24px 20px}html[data-theme] body #agentes .agent-stage{padding:20px}html[data-theme] body #agentes .agent-selector button{padding:10px;grid-template-columns:30px minmax(0,1fr);gap:6px}html[data-theme] body #agentes .agent-selector svg{width:30px}html[data-theme] body #agentes .agent-conversation{padding:16px}}
 
+html[data-theme] body #agentes .agent-audiences.agent-three-clients{grid-template-columns:1fr}
+@media(max-width:480px){html[data-theme] body #agentes .agent-three-clients .agent-selector{gap:6px}html[data-theme] body #agentes .agent-three-clients .agent-selector button{display:flex;flex-direction:column;text-align:center;padding:10px 6px}}
+
