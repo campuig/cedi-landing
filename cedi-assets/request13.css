@@ -62,3 +62,11 @@ html[data-theme] body section#inicio .hero-object iframe{border-radius:50%;mask-
  html[data-theme] body section#inicio.lux-hero .hero-object{grid-column:1!important;grid-row:2!important;width:min(80%,350px)!important}
  html[data-theme] body section#inicio h1{font-size:clamp(36px,8.4vw,62px)!important}
 }
+
+html[data-theme] body section#inicio.lux-hero{
+ --hero-ink:white;--hero-muted:#e3eef3;
+ background:radial-gradient(ellipse 50% 50% at center,var(--azul) 0%,color-mix(in srgb,var(--azul) 55%,black) 38%,color-mix(in srgb,var(--azul) 15%,black) 73%,black 100%)!important}
+html[data-theme] body section#inicio h1 .hero-impact-secondary,
+html[data-theme] body section#inicio :is(.hero-how,.hero-model-note a){color:color-mix(in srgb,var(--azul) 18%,white)!important}
+html[data-theme] body section#inicio .hero-demo{background:white!important;color:#101a20!important}
+html[data-theme] body section#inicio .hero-object iframe{background:white!important}
